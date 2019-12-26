@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/WebApp/Default.aspx.cs)
 <!-- default file list end -->
 # Web Dashboard - How to get data from a clicked dashboard item
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/230117938/)**
+<!-- run online end -->
 
 
 This example shows how to get data from a clicked dashboard item using the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_ASPxClientDashboard_ItemClick) event.
