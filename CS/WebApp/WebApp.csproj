@@ -115,9 +115,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="App_Data\Dashboards\" />
   </ItemGroup>
   <PropertyGroup>
