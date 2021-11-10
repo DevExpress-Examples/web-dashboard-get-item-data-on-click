@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Dashboard for Web Forms - How to get data from a clicked dashboard item
+# Dashboard for Web Forms - How to Get Data from a Clicked Dashboard Item
 
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/230117938/)**
