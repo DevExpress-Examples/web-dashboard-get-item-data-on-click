@@ -3,12 +3,6 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T848291)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [Default.aspx](./CS/WebApp/Default.aspx)
-* [Default.aspx.cs](./CS/WebApp/Default.aspx.cs)
-<!-- default file list end -->
 
 # Dashboard for Web Forms - How to get data from a clicked dashboard item
 
@@ -16,8 +10,14 @@
 **[[Run Online]](https://codecentral.devexpress.com/230117938/)**
 <!-- run online end -->
 
+This example shows how use the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_ASPxClientDashboard_ItemClick) event to get data from a clicked dashboard item.
+<!-- default file list -->
+## Files to Look at
+* [Default.aspx](./CS/WebApp/Default.aspx) (VB:[Default.aspx](./VB/WebApp/Default.aspx))
+* [Default.aspx.cs](./CS/WebApp/Default.aspx.cs) (VB:[Default.aspx.vb](./VB/WebApp/Default.aspx.vb))
+<!-- default file list end -->
 
-This example shows how to get data from a clicked dashboard item using the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_ASPxClientDashboard_ItemClick) event.
+## Example Overview
 
 The event handler receives arguments of the [ASPxClientDashboardItemClickEventArgs](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs) type, which allows you to get data displayed in a clicked item: grid rows, series points, cards, etc.
 
