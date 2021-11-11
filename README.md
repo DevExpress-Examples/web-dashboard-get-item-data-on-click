@@ -10,23 +10,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/230117938/)**
 <!-- run online end -->
 
-This example shows how use the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_ASPxClientDashboard_ItemClick) event to get data from a clicked dashboard item.
-<!-- default file list -->
-## Files to Look at
-* [Default.aspx](./CS/WebApp/Default.aspx) (VB:[Default.aspx](./VB/WebApp/Default.aspx))
-* [Default.aspx.cs](./CS/WebApp/Default.aspx.cs) (VB:[Default.aspx.vb](./VB/WebApp/Default.aspx.vb))
-<!-- default file list end -->
 
-## Example Overview
-
-The `ItemClick` event handler receives arguments of the [ASPxClientDashboardItemClickEventArgs](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs) type, which allows you to get data displayed in a clicked item: grid rows, series points, cards, etc. Note that some dashboard items display multidimensional data. See the [Obtaining Underlying and Displayed Data](https://docs.devexpress.com/Dashboard/18078/create-the-designer-and-viewer-applications/web-dashboard/aspnet-web-forms-dashboard-control/obtain-underlying-and-displayed-data) help topic for more information about the general data structure.
-
-Follow the steps below to get data from a clicked dashboard item:
-
-1. Call the [GetData](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs#js_ASPxClientDashboardItemClickEventArgs_GetData) method to request the [ASPxClientDashboardItemData](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemData) object that contains all information about item data.
-2. Call the [ASPxClientDashboardItemData.GetAxisNames](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemData#js_ASPxClientDashboardItemData_GetAxisNames) method to get a list of displayed axes.
-3. Use the [GetDimensions](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs#js_ASPxClientDashboardItemClickEventArgs_GetDimensions_axisName_) and [GetAxisPoint](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs#js_ASPxClientDashboardItemClickEventArgs_GetAxisPoint_axisName_) methods to get information about dimensions that corresponds to each axis.
-4. Use the [GetSlice](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemData#js_ASPxClientDashboardItemData_GetSlice_tuple_) method to divide data by displayed axis points and call the [GetMeasureValue](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemData#js_ASPxClientDashboardItemData_GetMeasureValue_measureId_) method To get the last level measure values.
 
 ## Documentation
 
