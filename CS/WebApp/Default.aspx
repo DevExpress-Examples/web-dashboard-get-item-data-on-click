@@ -8,53 +8,84 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <script>
-        function onItemClick(s, args) {
-            if(args.ItemName == "chartDashboardItem1") {
-                var itemData = args.GetData(),
-                    axes = itemData.GetAxisNames(),
-                    measures = itemData.GetMeasures(),
-                    row = [],
-                    rowText = "";
-                $.each(axes, function(_, axis) {
-                    rowText = rowText + axis + "\n";
-                    var axisPoint = args.GetAxisPoint(axis);
-                    var dimensions = itemData.GetDimensions(axis);
-                    $.each(dimensions, function(_, dimension) {
-                        var dimensionValue = axisPoint.GetDimensionValue(dimension.Id);
-                        if(dimensionValue != null) {
-                            row.push(dimensionValue.GetDisplayText());
-                            rowText = rowText + "    " + dimension.Name + ": " + dimensionValue.GetDisplayText() + "\n";
-                        }
-                    });
-                });
-                var dataSlice = itemData;
-                $.each(axes, function(_, axis) {
-                    var axisPoint = args.GetAxisPoint(axis);
-                    dataSlice = dataSlice.GetSlice(axisPoint);
+	<title></title>
+	<script>
+		function onItemClick(s, args) {
+			if (args.ItemName == "chartDashboardItem1") {
+				var itemData = args.GetData(),
+					axes = itemData.GetAxisNames(),
+					measures = itemData.GetMeasures(),
+					dimensionName = "",
+					dimensionVal = "",
+					measureName = "",
+					measureVal = "";
+				$.each(axes, function (_, axis) {
+					var axisPoint = args.GetAxisPoint(axis);
+					var dimensions = itemData.GetDimensions(axis);
+					$.each(dimensions, function (_, dimension) {
+						var dimensionValue = axisPoint.GetDimensionValue(dimension.Id);
+						if (dimensionValue != null) {
+							dimensionName = dimension.Name;
+							dimensionVal = dimensionValue.GetDisplayText();
+						}
+					});
+				});
+				var dataSlice = itemData;
+				$.each(axes, function (_, axis) {
+					var axisPoint = args.GetAxisPoint(axis);
+					dataSlice = dataSlice.GetSlice(axisPoint);
 
-                });
-                rowText = rowText + "Measures:\n";
-                $.each(measures, function(_, measure) {
-                    var measureValue = dataSlice.GetMeasureValue(measure.Id);
-                    row.push(measureValue.GetValue());
-                    rowText = rowText + "   " + measureValue.GetValue() + "; ";
-                });
-                alert(rowText);
-            }
-        }
-    </script>
+				});
+				$.each(measures, function (_, measure) {
+					var measureValue = dataSlice.GetMeasureValue(measure.Id);
+					measureName = measure.Name;
+					measureVal = measureValue.GetValue();
+				});
+				const popupContentTemplate = function () {
+					return $('<div>').append(
+						$(`<p><b>Dimensions: </b></p>`),
+						$(`<p><span>${dimensionName}</span> - <span>${dimensionVal}</span></p>`),
+						$(`<p><b>Measures: </b></p>`),
+						$(`<p><span>${measureName}</span> - <span>${measureVal}</span></p>`)
+					);
+				}
+				$popupContent = popup.content();
+				$popupContent.empty();
+				$popupContent.append(popupContentTemplate);
+				var position = popup.option('position');
+				position.at = "left top";
+				position.offset = { x: mouseX + 230, y: mouseY - 150 };
+				popup.option('position', position);
+				popup.show();
+			}
+		}
+		var mouseX = 0, mouseY = 0;
+		var popup;
+		function initPopup() {
+			popup = $("#myPopup").dxPopup({
+				width: 300, height: 300,
+				title: "Clicked data",
+				showCloseButton: true,
+				closeOnOutsideClick: true
+			}).dxPopup('instance');
+			document.addEventListener('mousemove', (event) => {
+				mouseX = event.clientX;
+				mouseY = event.clientY;
+			});
+		}
+	</script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" WorkingMode="ViewerOnly">
-                <ClientSideEvents
-                    ItemClick="onItemClick" />
-            </dx:ASPxDashboard>
-        </div>
-    </form>
+	<form id="form1" runat="server">
+		<div>
+			<div id="myPopup"></div>
+			<dx:ASPxDashboard ID="ASPxDashboard1" runat="server" WorkingMode="ViewerOnly">
+				<ClientSideEvents
+					ItemClick="onItemClick"
+					Init="function(s, e) { initPopup(); }" />
+			</dx:ASPxDashboard>
+		</div>
+	</form>
 </body>
 </html>
 
