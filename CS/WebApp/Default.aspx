@@ -52,14 +52,9 @@
 				$popupContent = popup.content();
 				$popupContent.empty();
 				$popupContent.append(popupContentTemplate);
-				var position = popup.option('position');
-				position.at = "left top";
-				position.offset = { x: mouseX + 230, y: mouseY - 150 };
-				popup.option('position', position);
 				popup.show();
 			}
 		}
-		var mouseX = 0, mouseY = 0;
 		var popup;
 		function initPopup() {
 			popup = $("#myPopup").dxPopup({
@@ -68,10 +63,6 @@
 				showCloseButton: true,
 				closeOnOutsideClick: true
 			}).dxPopup('instance');
-			document.addEventListener('mousemove', (event) => {
-				mouseX = event.clientX;
-				mouseY = event.clientY;
-			});
 		}
 	</script>
 </head>
