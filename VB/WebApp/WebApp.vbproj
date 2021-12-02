@@ -13,7 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -101,6 +102,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Dashboards\dashboard1.xml" />
     <Content Include="App_Data\nwind.mdb" />
     <Content Include="Default.aspx" />
     <Content Include="Web.config" />
@@ -115,9 +117,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\Dashboards\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

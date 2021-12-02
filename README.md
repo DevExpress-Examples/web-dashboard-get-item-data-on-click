@@ -11,6 +11,9 @@
 <!-- run online end -->
 
 This example shows how use the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_ASPxClientDashboard_ItemClick) event to get data from a clicked dashboard item.
+
+![chart clicked data](./images/chart-clicked-data.png)
+
 <!-- default file list -->
 ## Files to Look at
 * [Default.aspx](./CS/WebApp/Default.aspx) (VB:[Default.aspx](./VB/WebApp/Default.aspx))
@@ -20,8 +23,6 @@ This example shows how use the client-side [ASPxClientDashboard.ItemClick](https
 ## Example Overview
 
 The `ItemClick` event handler receives arguments of the [ASPxClientDashboardItemClickEventArgs](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemClickEventArgs) type that allows you to get data displayed in a clicked item: grid rows, series points, cards. Note that some dashboard items display multidimensional data. See the [Obtaining Underlying and Displayed Data](https://docs.devexpress.com/Dashboard/18078/create-the-designer-and-viewer-applications/web-dashboard/aspnet-web-forms-dashboard-control/obtain-underlying-and-displayed-data) help topic for more information about the general data structure.
-
-![chart clicked data](./images/chart-clicked-data.png)
 
 Follow the steps below to get data from a clicked dashboard item:
 
