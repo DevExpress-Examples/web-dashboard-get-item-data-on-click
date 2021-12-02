@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="Test Clicked Item Dashboard" />
+  <Title Text="Clicked Item Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source" ComponentName="sqlDataSource1">
       <Connection Name="nwindConnection" FromAppConfig="true" />

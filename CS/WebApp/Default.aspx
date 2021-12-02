@@ -43,9 +43,9 @@
 				});
 				const popupContentTemplate = function () {
 					return $('<div>').append(
-						$(`<p><b>Dimensions: </b></p>`),
+						$(`<p><b>Dimension: </b></p>`),
 						$(`<p><span>${dimensionName}</span> - <span>${dimensionVal}</span></p>`),
-						$(`<p><b>Measures: </b></p>`),
+						$(`<p><b>Measure: </b></p>`),
 						$(`<p><span>${measureName}</span> - <span>${measureVal}</span></p>`)
 					);
 				}
