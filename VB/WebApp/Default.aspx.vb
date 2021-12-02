@@ -1,6 +1,5 @@
 Imports DevExpress.DashboardCommon
 Imports DevExpress.DashboardWeb
-Imports DevExpress.DataAccess.ConnectionParameters
 Imports DevExpress.DataAccess.Sql
 Imports System
 Imports System.Web.UI
