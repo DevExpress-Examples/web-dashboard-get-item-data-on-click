@@ -6,9 +6,6 @@
 
 # Dashboard for Web Forms - How to Get Data from a Clicked Dashboard Item
 
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/230117938/)**
-<!-- run online end -->
 
 This example shows how use the client-side [ASPxClientDashboard.ItemClick](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.Web.WebForms.ASPxClientDashboard?p=netframework#js_aspxclientdashboard_itemclick) event to get data from a clicked dashboard item.
 
